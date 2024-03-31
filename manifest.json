@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Text Selection Menu",
+  "version": "1.0",
+  "description": "Shows a menu icon when text is selected.",
+  "permissions": ["activeTab", "contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
